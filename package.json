@@ -1,20 +1,20 @@
 {
-   "name": "dreadball-toolkit-webapp",
+   "name": "symbaroum-toolkit-webapp",
    "version": "0.1.0",
-   "description": "A team builder and utilities page for Dreadball",
-   "author": "Bernardo Martï¿½nez Garrido",
-   "homepage": "https://www.github.com/bernardo-mg/dreadball-toolkit-webapp",
+   "description": "Character creator for Symbaroum",
+   "author": "Bernardo Martínez Garrido",
+   "homepage": "https://www.github.com/bernardo-mg/symbaroum-toolkit-webapp",
    "license": "Apache-2.0",
    "keywords": [
-      "dreadball",
-      "team builder"
+      "symbaroum",
+      "character generator"
    ],
    "repository": {
       "type": "git",
-      "url": "git@github.com:bernardo-mg/dreadball-toolkit-webapp.git"
+      "url": "git@github.com:bernardo-mg/symbaroum-toolkit-webapp.git"
    },
    "bugs": {
-      "url": "https://www.github.com/bernardo-mg/dreadball-toolkit-webapp/issues"
+      "url": "https://www.github.com/bernardo-mg/symbaroum-toolkit-webapp/issues"
    },
    "scripts": {
       "development": "webpack --config webpack.dev.js",
