@@ -8,9 +8,9 @@ const titleMessages = defineMessages({
       id: 'title.link.about',
       defaultMessage: 'About'
    },
-   data: {
-      id: 'title.link.data',
-      defaultMessage: 'Data'
+   chargen: {
+      id: 'title.link.chargen',
+      defaultMessage: 'Character Generation'
    },
    title: {
       id: 'title.app',
