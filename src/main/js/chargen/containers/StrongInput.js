@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { setStrong } from 'chargen/assets/actions';
+import { setStrong } from 'chargen/actions';
 
 import BoundNumberInput from 'components/BoundNumberInput';
 
-import { selectStrong } from 'chargen/assets/selectors';
+import { selectStrong } from 'chargen/selectors';
 
 const StrongInput = (props) =>
    <BoundNumberInput {...props} />;

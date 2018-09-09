@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { setDiscreet } from 'chargen/assets/actions';
+import { setDiscreet } from 'chargen/actions';
 
 import BoundNumberInput from 'components/BoundNumberInput';
 
-import { selectDiscreet } from 'chargen/assets/selectors';
+import { selectDiscreet } from 'chargen/selectors';
 
 const DiscreetInput = (props) =>
    <BoundNumberInput {...props} />;

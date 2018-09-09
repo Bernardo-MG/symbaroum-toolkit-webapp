@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { setResolute } from 'chargen/assets/actions';
+import { setResolute } from 'chargen/actions';
 
 import BoundNumberInput from 'components/BoundNumberInput';
 
-import { selectResolute } from 'chargen/assets/selectors';
+import { selectResolute } from 'chargen/selectors';
 
 const ResoluteInput = (props) =>
    <BoundNumberInput {...props} />;

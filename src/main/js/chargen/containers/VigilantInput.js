@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { setVigilant } from 'chargen/assets/actions';
+import { setVigilant } from 'chargen/actions';
 
 import BoundNumberInput from 'components/BoundNumberInput';
 
-import { selectVigilant } from 'chargen/assets/selectors';
+import { selectVigilant } from 'chargen/selectors';
 
 const VigilantInput = (props) =>
    <BoundNumberInput {...props} />;

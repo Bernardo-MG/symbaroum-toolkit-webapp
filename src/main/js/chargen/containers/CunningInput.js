@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { setCunning } from 'chargen/assets/actions';
+import { setCunning } from 'chargen/actions';
 
 import BoundNumberInput from 'components/BoundNumberInput';
 
-import { selectCunning } from 'chargen/assets/selectors';
+import { selectCunning } from 'chargen/selectors';
 
 const CunningInput = (props) =>
    <BoundNumberInput {...props} />;

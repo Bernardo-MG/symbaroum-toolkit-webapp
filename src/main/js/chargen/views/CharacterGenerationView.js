@@ -8,10 +8,13 @@ import { injectIntl } from 'react-intl';
 
 import SimpleView from 'views/containers/SimpleView';
 
+import AttributesForm from 'chargen/components/AttributesForm';
+
 import titleMessages from 'i18n/title';
 
 const CharacterGenerationView = (props) =>
    <SimpleView title={props.intl.formatMessage(titleMessages.chargen)}>
+      <AttributesForm />
    </SimpleView>;
 
 CharacterGenerationView.propTypes = {

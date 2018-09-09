@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { setAccurate } from 'chargen/assets/actions';
+import { setAccurate } from 'chargen/actions';
 
 import BoundNumberInput from 'components/BoundNumberInput';
 
-import { selectAccurate } from 'chargen/assets/selectors';
+import { selectAccurate } from 'chargen/selectors';
 
 const AccurateInput = (props) =>
    <BoundNumberInput {...props} />;

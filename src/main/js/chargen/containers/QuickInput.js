@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { setQuick } from 'chargen/assets/actions';
+import { setQuick } from 'chargen/actions';
 
 import BoundNumberInput from 'components/BoundNumberInput';
 
-import { selectQuick } from 'chargen/assets/selectors';
+import { selectQuick } from 'chargen/selectors';
 
 const QuickInput = (props) =>
    <BoundNumberInput {...props} />;

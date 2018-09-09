@@ -1,5 +1,5 @@
 
-export const selectAttributes = (state) => state.builder.assets;
+export const selectAttributes = (state) => state.chargen.attributes;
 
 export const selectAccurate = (state) => selectAttributes(state).accurate;
 

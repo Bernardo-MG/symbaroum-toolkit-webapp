@@ -1,4 +1,4 @@
-import * as types from 'charen/actions/actionTypes';
+import * as types from 'chargen/actions/actionTypes';
 
 export const setAccurate = (value) => {
    return {

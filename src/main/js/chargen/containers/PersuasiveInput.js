@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { setPersuasive } from 'chargen/assets/actions';
+import { setPersuasive } from 'chargen/actions';
 
 import BoundNumberInput from 'components/BoundNumberInput';
 
-import { selectPersuasive } from 'chargen/assets/selectors';
+import { selectPersuasive } from 'chargen/selectors';
 
 const PersuasiveInput = (props) =>
    <BoundNumberInput {...props} />;
