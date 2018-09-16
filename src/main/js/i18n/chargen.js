@@ -5,35 +5,39 @@ import { defineMessages } from 'react-intl';
  */
 const appMessages = defineMessages({
    accurate: {
-      id: 'attributes.accurate',
+      id: 'chargen.accurate',
       defaultMessage: 'Accurate'
    },
    cunning: {
-      id: 'attributes.cunning',
+      id: 'chargen.cunning',
       defaultMessage: 'Cunning'
    },
    discreet: {
-      id: 'attributes.discreet',
+      id: 'chargen.discreet',
       defaultMessage: 'Discreet'
    },
    persuasive: {
-      id: 'attributes.persuasive',
+      id: 'chargen.persuasive',
       defaultMessage: 'Persuasive'
    },
+   player_name: {
+      id: 'chargen.player_name',
+      defaultMessage: 'Player Name'
+   },
    quick: {
-      id: 'attributes.quick',
+      id: 'chargen.quick',
       defaultMessage: 'Quick'
    },
    resolute: {
-      id: 'attributes.resolute',
+      id: 'chargen.resolute',
       defaultMessage: 'Resolute'
    },
    strong: {
-      id: 'attributes.strong',
+      id: 'chargen.strong',
       defaultMessage: 'Strong'
    },
    vigilant: {
-      id: 'attributes.vigilant',
+      id: 'chargen.vigilant',
       defaultMessage: 'Vigilant'
    }
 });

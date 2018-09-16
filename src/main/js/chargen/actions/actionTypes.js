@@ -6,3 +6,5 @@ export const SET_QUICK = 'SET_QUICK';
 export const SET_RESOLUTE = 'SET_RESOLUTE';
 export const SET_STRONG = 'SET_STRONG';
 export const SET_VIGILANT = 'SET_VIGILANT';
+
+export const SET_PLAYER_NAME = 'SET_PLAYER_NAME';

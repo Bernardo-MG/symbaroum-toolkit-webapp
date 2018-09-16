@@ -55,3 +55,10 @@ export const setVigilant = (value) => {
       payload: value
    };
 };
+
+export const setPlayerName = (value) => {
+   return {
+      type: types.SET_PLAYER_NAME,
+      payload: value
+   };
+};
