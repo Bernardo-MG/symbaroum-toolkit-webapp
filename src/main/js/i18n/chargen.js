@@ -36,6 +36,10 @@ const appMessages = defineMessages({
       id: 'chargen.resolute',
       defaultMessage: 'Resolute'
    },
+   shadow: {
+      id: 'chargen.shadow',
+      defaultMessage: 'Shadow'
+   },
    strong: {
       id: 'chargen.strong',
       defaultMessage: 'Strong'

@@ -1,7 +1,7 @@
 import * as ActionTypes from 'chargen/actions/actionTypes';
 
 const attributes = (
-   state = { characterName: '', playerName: '' },
+   state = { characterName: '', playerName: '', shadow: '' },
    action) => {
    const { type, payload } = action;
    switch (type) {
@@ -15,6 +15,12 @@ const attributes = (
       return {
          ...state,
          playerName: payload
+      };
+   }
+   case ActionTypes.SET_SHADOW: {
+      return {
+         ...state,
+         shadow: payload
       };
    }
    default:

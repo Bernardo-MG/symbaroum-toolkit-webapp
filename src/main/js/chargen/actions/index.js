@@ -56,6 +56,13 @@ export const setVigilant = (value) => {
    };
 };
 
+export const setCharacterName = (value) => {
+   return {
+      type: types.SET_CHARACTER_NAME,
+      payload: value
+   };
+};
+
 export const setPlayerName = (value) => {
    return {
       type: types.SET_PLAYER_NAME,
@@ -63,9 +70,9 @@ export const setPlayerName = (value) => {
    };
 };
 
-export const setCharacterName = (value) => {
+export const setShadow = (value) => {
    return {
-      type: types.SET_CHARACTER_NAME,
+      type: types.SET_SHADOW,
       payload: value
    };
 };

@@ -13,6 +13,7 @@ import SimpleView from 'views/containers/SimpleView';
 import AttributesForm from 'chargen/components/AttributesForm';
 import CharacterNameInput from 'chargen/containers/CharacterNameInput';
 import PlayerNameInput from 'chargen/containers/PlayerNameInput';
+import ShadowInput from 'chargen/containers/ShadowInput';
 
 import chargenMessages from 'i18n/chargen';
 import titleMessages from 'i18n/title';
@@ -22,6 +23,7 @@ const CharacterGenerationView = (props) =>
       <Box justify='center' align='center' margin='medium'>
          <PlayerNameInput label={props.intl.formatMessage(chargenMessages.player_name)} />
          <CharacterNameInput label={props.intl.formatMessage(chargenMessages.character_name)} />
+         <ShadowInput label={props.intl.formatMessage(chargenMessages.shadow)} />
          <AttributesForm />
       </Box>
    </SimpleView>;
