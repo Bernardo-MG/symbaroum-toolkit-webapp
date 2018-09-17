@@ -11,6 +11,7 @@ import Box from 'grommet/components/Box';
 import SimpleView from 'views/containers/SimpleView';
 
 import AttributesForm from 'chargen/components/AttributesForm';
+import CharacterNameInput from 'chargen/containers/CharacterNameInput';
 import PlayerNameInput from 'chargen/containers/PlayerNameInput';
 
 import chargenMessages from 'i18n/chargen';
@@ -20,6 +21,7 @@ const CharacterGenerationView = (props) =>
    <SimpleView title={props.intl.formatMessage(titleMessages.chargen)}>
       <Box justify='center' align='center' margin='medium'>
          <PlayerNameInput label={props.intl.formatMessage(chargenMessages.player_name)} />
+         <CharacterNameInput label={props.intl.formatMessage(chargenMessages.character_name)} />
          <AttributesForm />
       </Box>
    </SimpleView>;

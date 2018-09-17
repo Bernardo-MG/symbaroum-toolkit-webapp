@@ -62,3 +62,10 @@ export const setPlayerName = (value) => {
       payload: value
    };
 };
+
+export const setCharacterName = (value) => {
+   return {
+      type: types.SET_CHARACTER_NAME,
+      payload: value
+   };
+};

@@ -7,4 +7,5 @@ export const SET_RESOLUTE = 'SET_RESOLUTE';
 export const SET_STRONG = 'SET_STRONG';
 export const SET_VIGILANT = 'SET_VIGILANT';
 
+export const SET_CHARACTER_NAME = 'SET_CHARACTER_NAME';
 export const SET_PLAYER_NAME = 'SET_PLAYER_NAME';

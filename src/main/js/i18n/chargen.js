@@ -8,6 +8,10 @@ const appMessages = defineMessages({
       id: 'chargen.accurate',
       defaultMessage: 'Accurate'
    },
+   character_name: {
+      id: 'chargen.character_name',
+      defaultMessage: 'Character Name'
+   },
    cunning: {
       id: 'chargen.cunning',
       defaultMessage: 'Cunning'
