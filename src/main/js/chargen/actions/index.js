@@ -70,6 +70,13 @@ export const setPlayerName = (value) => {
    };
 };
 
+export const setQuote = (value) => {
+   return {
+      type: types.SET_QUOTE,
+      payload: value
+   };
+};
+
 export const setShadow = (value) => {
    return {
       type: types.SET_SHADOW,

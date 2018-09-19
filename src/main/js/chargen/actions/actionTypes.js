@@ -9,4 +9,5 @@ export const SET_VIGILANT = 'SET_VIGILANT';
 
 export const SET_CHARACTER_NAME = 'SET_CHARACTER_NAME';
 export const SET_PLAYER_NAME = 'SET_PLAYER_NAME';
+export const SET_QUOTE = 'SET_QUOTE';
 export const SET_SHADOW = 'SET_SHADOW';
