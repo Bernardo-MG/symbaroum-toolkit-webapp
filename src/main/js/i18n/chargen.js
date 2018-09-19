@@ -20,6 +20,10 @@ const appMessages = defineMessages({
       id: 'chargen.discreet',
       defaultMessage: 'Discreet'
    },
+   occupation: {
+      id: 'chargen.occupation',
+      defaultMessage: 'Occupation'
+   },
    persuasive: {
       id: 'chargen.persuasive',
       defaultMessage: 'Persuasive'
@@ -31,6 +35,10 @@ const appMessages = defineMessages({
    quick: {
       id: 'chargen.quick',
       defaultMessage: 'Quick'
+   },
+   race: {
+      id: 'chargen.race',
+      defaultMessage: 'Race'
    },
    resolute: {
       id: 'chargen.resolute',
