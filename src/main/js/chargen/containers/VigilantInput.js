@@ -7,12 +7,12 @@ import { bindActionCreators } from 'redux';
 
 import { setVigilant } from 'chargen/actions';
 
-import BoundNumberInput from 'components/BoundNumberInput';
+import ObservableNumberInput from 'components/ObservableNumberInput';
 
 import { selectVigilant } from 'chargen/selectors';
 
 const VigilantInput = (props) =>
-   <BoundNumberInput {...props} />;
+   <ObservableNumberInput {...props} />;
 
 VigilantInput.propTypes = {
    onChange: PropTypes.func.isRequired

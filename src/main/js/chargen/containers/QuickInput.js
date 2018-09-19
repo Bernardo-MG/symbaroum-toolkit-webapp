@@ -7,12 +7,12 @@ import { bindActionCreators } from 'redux';
 
 import { setQuick } from 'chargen/actions';
 
-import BoundNumberInput from 'components/BoundNumberInput';
+import ObservableNumberInput from 'components/ObservableNumberInput';
 
 import { selectQuick } from 'chargen/selectors';
 
 const QuickInput = (props) =>
-   <BoundNumberInput {...props} />;
+   <ObservableNumberInput {...props} />;
 
 QuickInput.propTypes = {
    onChange: PropTypes.func.isRequired

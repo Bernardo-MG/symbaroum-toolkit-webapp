@@ -7,12 +7,12 @@ import { bindActionCreators } from 'redux';
 
 import { setStrong } from 'chargen/actions';
 
-import BoundNumberInput from 'components/BoundNumberInput';
+import ObservableNumberInput from 'components/ObservableNumberInput';
 
 import { selectStrong } from 'chargen/selectors';
 
 const StrongInput = (props) =>
-   <BoundNumberInput {...props} />;
+   <ObservableNumberInput {...props} />;
 
 StrongInput.propTypes = {
    onChange: PropTypes.func.isRequired

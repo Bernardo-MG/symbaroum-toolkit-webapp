@@ -7,12 +7,12 @@ import { bindActionCreators } from 'redux';
 
 import { setPersuasive } from 'chargen/actions';
 
-import BoundNumberInput from 'components/BoundNumberInput';
+import ObservableNumberInput from 'components/ObservableNumberInput';
 
 import { selectPersuasive } from 'chargen/selectors';
 
 const PersuasiveInput = (props) =>
-   <BoundNumberInput {...props} />;
+   <ObservableNumberInput {...props} />;
 
 PersuasiveInput.propTypes = {
    onChange: PropTypes.func.isRequired

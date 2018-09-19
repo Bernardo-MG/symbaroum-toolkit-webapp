@@ -7,12 +7,12 @@ import { bindActionCreators } from 'redux';
 
 import { setCunning } from 'chargen/actions';
 
-import BoundNumberInput from 'components/BoundNumberInput';
+import ObservableNumberInput from 'components/ObservableNumberInput';
 
 import { selectCunning } from 'chargen/selectors';
 
 const CunningInput = (props) =>
-   <BoundNumberInput {...props} />;
+   <ObservableNumberInput {...props} />;
 
 CunningInput.propTypes = {
    onChange: PropTypes.func.isRequired

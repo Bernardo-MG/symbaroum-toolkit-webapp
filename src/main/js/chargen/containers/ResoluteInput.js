@@ -7,12 +7,12 @@ import { bindActionCreators } from 'redux';
 
 import { setResolute } from 'chargen/actions';
 
-import BoundNumberInput from 'components/BoundNumberInput';
+import ObservableNumberInput from 'components/ObservableNumberInput';
 
 import { selectResolute } from 'chargen/selectors';
 
 const ResoluteInput = (props) =>
-   <BoundNumberInput {...props} />;
+   <ObservableNumberInput {...props} />;
 
 ResoluteInput.propTypes = {
    onChange: PropTypes.func.isRequired

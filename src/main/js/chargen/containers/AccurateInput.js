@@ -7,12 +7,12 @@ import { bindActionCreators } from 'redux';
 
 import { setAccurate } from 'chargen/actions';
 
-import BoundNumberInput from 'components/BoundNumberInput';
+import ObservableNumberInput from 'components/ObservableNumberInput';
 
 import { selectAccurate } from 'chargen/selectors';
 
 const AccurateInput = (props) =>
-   <BoundNumberInput {...props} />;
+   <ObservableNumberInput {...props} />;
 
 AccurateInput.propTypes = {
    onChange: PropTypes.func.isRequired

@@ -7,12 +7,12 @@ import { bindActionCreators } from 'redux';
 
 import { setDiscreet } from 'chargen/actions';
 
-import BoundNumberInput from 'components/BoundNumberInput';
+import ObservableNumberInput from 'components/ObservableNumberInput';
 
 import { selectDiscreet } from 'chargen/selectors';
 
 const DiscreetInput = (props) =>
-   <BoundNumberInput {...props} />;
+   <ObservableNumberInput {...props} />;
 
 DiscreetInput.propTypes = {
    onChange: PropTypes.func.isRequired
