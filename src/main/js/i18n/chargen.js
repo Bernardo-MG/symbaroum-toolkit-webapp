@@ -36,6 +36,10 @@ const appMessages = defineMessages({
       id: 'chargen.quick',
       defaultMessage: 'Quick'
    },
+   quote: {
+      id: 'chargen.quote',
+      defaultMessage: 'Quote'
+   },
    race: {
       id: 'chargen.race',
       defaultMessage: 'Race'

@@ -14,6 +14,7 @@ import AttributesForm from 'chargen/components/AttributesForm';
 import CharacterNameInput from 'chargen/containers/CharacterNameInput';
 import OccupationCombo from 'chargen/containers/OccupationCombo';
 import PlayerNameInput from 'chargen/containers/PlayerNameInput';
+import QuoteInput from 'chargen/containers/QuoteInput';
 import RaceCombo from 'chargen/containers/RaceCombo';
 import ShadowInput from 'chargen/containers/ShadowInput';
 
@@ -26,6 +27,7 @@ const CharacterGenerationView = (props) =>
          <PlayerNameInput label={props.intl.formatMessage(chargenMessages.player_name)} />
          <CharacterNameInput label={props.intl.formatMessage(chargenMessages.character_name)} />
          <ShadowInput label={props.intl.formatMessage(chargenMessages.shadow)} />
+         <QuoteInput label={props.intl.formatMessage(chargenMessages.quote)} />
          <RaceCombo placeHolder={props.intl.formatMessage(chargenMessages.race)} />
          <OccupationCombo placeHolder={props.intl.formatMessage(chargenMessages.occupation)} />
          <AttributesForm />
