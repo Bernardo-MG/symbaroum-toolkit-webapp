@@ -63,6 +63,13 @@ export const setCharacterName = (value) => {
    };
 };
 
+export const setOccupation = (value) => {
+   return {
+      type: types.SET_OCCUPATION,
+      payload: value
+   };
+};
+
 export const setPlayerName = (value) => {
    return {
       type: types.SET_PLAYER_NAME,
@@ -73,6 +80,13 @@ export const setPlayerName = (value) => {
 export const setQuote = (value) => {
    return {
       type: types.SET_QUOTE,
+      payload: value
+   };
+};
+
+export const setRace = (value) => {
+   return {
+      type: types.SET_RACE,
       payload: value
    };
 };
