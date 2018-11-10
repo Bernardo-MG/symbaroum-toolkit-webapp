@@ -39,6 +39,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.junit.jupiter.api.Test;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 
 import com.bernardomg.tabletop.symbaroum_toolkit_webapp.model.ExampleEntity;
 import com.bernardomg.tabletop.symbaroum_toolkit_webapp.model.persistence.DefaultExampleEntity;
@@ -60,6 +61,7 @@ import com.bernardomg.tabletop.symbaroum_toolkit_webapp.service.ExampleEntitySer
         "classpath:context/application-context.xml" })
 @TestPropertySource({ "classpath:config/persistence-access.properties",
         "classpath:config/service.properties" })
+@Ignore
 public final class ITDefaultExampleEntityService {
 
     /**
