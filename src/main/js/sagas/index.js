@@ -1,4 +1,4 @@
-import { entitySagas } from 'example/sagas';
+import { chargenSagas } from 'chargen/sagas';
 import { all } from 'redux-saga/effects';
 
 /**
@@ -8,6 +8,6 @@ import { all } from 'redux-saga/effects';
  */
 export default function* rootSaga() {
    yield [
-      all([...entitySagas])
+      all([...chargenSagas])
    ];
 }

@@ -13,3 +13,5 @@ export const SET_PLAYER_NAME = 'SET_PLAYER_NAME';
 export const SET_QUOTE = 'SET_QUOTE';
 export const SET_RACE = 'SET_RACE';
 export const SET_SHADOW = 'SET_SHADOW';
+
+export const SET_RACES_OPTIONS = 'SET_RACES_OPTIONS';
