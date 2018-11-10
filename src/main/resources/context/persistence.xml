@@ -19,7 +19,7 @@
    <!-- ============================= CONFIGURATION ============================= -->
 
    <!-- Repositories -->
-   <jpa:repositories base-package="com.bernardomg.tabletop.symbaroum_toolkit_webapp.**.repository" />
+   <jpa:repositories base-package="com.bernardomg.tabletop.symbaroum.**.repository" />
 
    <!-- ================================== JPA ================================== -->
 
