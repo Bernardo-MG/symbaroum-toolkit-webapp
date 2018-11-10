@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.tabletop.symbaroum_toolkit_webapp.controller.error;
+package com.bernardomg.tabletop.symbaroum.web.controller.error;
 
 import java.io.IOException;
 

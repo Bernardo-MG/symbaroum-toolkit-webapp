@@ -27,4 +27,4 @@
  * These take care of application errors, and generate a response for them.
  */
 
-package com.bernardomg.tabletop.symbaroum_toolkit_webapp.controller.error;
+package com.bernardomg.tabletop.symbaroum.web.controller.error;

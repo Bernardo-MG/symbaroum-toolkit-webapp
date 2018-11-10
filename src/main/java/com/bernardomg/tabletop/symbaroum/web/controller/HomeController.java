@@ -22,36 +22,42 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.tabletop.symbaroum_toolkit_webapp.controller;
+package com.bernardomg.tabletop.symbaroum.web.controller;
 
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Initializes all the controllers with a common configuration.
+ * Controller for the home view.
  * 
  * @author Bernardo Mart&iacute;nez Garrido
  */
-@ControllerAdvice
-public final class GlobalBindingInitializer {
+@Controller
+@RequestMapping("/**")
+public class HomeController {
+
+    /**
+     * Name for the welcome view.
+     */
+    private static final String VIEW_WELCOME = "index";
 
     /**
      * Default constructor.
      */
-    public GlobalBindingInitializer() {
+    public HomeController() {
         super();
     }
 
     /**
-     * Sets the fields which can't be bound.
+     * Shows the welcome view.
      * 
-     * @param dataBinder
-     *            data binder
+     * @return the welcome view
      */
-    @InitBinder
-    public final void setDisallowedFields(final WebDataBinder dataBinder) {
-        dataBinder.setDisallowedFields("id");
+    @GetMapping(produces = MediaType.TEXT_HTML_VALUE)
+    public final String showWelcome() {
+        return VIEW_WELCOME;
     }
 
 }

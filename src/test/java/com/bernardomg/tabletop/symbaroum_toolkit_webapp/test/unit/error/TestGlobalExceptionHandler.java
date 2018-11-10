@@ -36,7 +36,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.bernardomg.tabletop.symbaroum_toolkit_webapp.controller.error.GlobalExceptionHandler;
+import com.bernardomg.tabletop.symbaroum.web.controller.error.GlobalExceptionHandler;
 import com.bernardomg.tabletop.symbaroum_toolkit_webapp.controller.entity.ExampleEntityController;
 import com.bernardomg.tabletop.symbaroum_toolkit_webapp.service.ExampleEntityService;
 import com.bernardomg.tabletop.symbaroum_toolkit_webapp.test.config.UrlConfig;
