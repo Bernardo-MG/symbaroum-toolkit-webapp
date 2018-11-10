@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import { injectIntl } from 'react-intl';
 
@@ -18,32 +19,50 @@ import QuoteInput from 'chargen/containers/QuoteInput';
 import RaceInput from 'chargen/containers/RaceInput';
 import ShadowInput from 'chargen/containers/ShadowInput';
 
+import { requestRaces } from 'chargen/requests/races/actions';
+
 import chargenMessages from 'i18n/chargen';
 import titleMessages from 'i18n/title';
 
-const CharacterGenerationView = (props) =>
-   <SimpleView title={props.intl.formatMessage(titleMessages.chargen)}>
-      <Box justify='center' align='center' margin='medium'>
-         <PlayerNameInput label={props.intl.formatMessage(chargenMessages.player_name)} />
-         <CharacterNameInput label={props.intl.formatMessage(chargenMessages.character_name)} />
-         <ShadowInput label={props.intl.formatMessage(chargenMessages.shadow)} />
-         <QuoteInput label={props.intl.formatMessage(chargenMessages.quote)} />
-         <RaceInput label={props.intl.formatMessage(chargenMessages.race)} />
-         <OccupationInput label={props.intl.formatMessage(chargenMessages.occupation)} />
-         <AttributesForm />
-      </Box>
-   </SimpleView>;
+class CharacterGenerationView extends Component {
+
+   constructor(props) {
+      super(props);
+
+      props.initialize();
+   }
+
+   render() {
+      return (
+         <SimpleView title={this.props.intl.formatMessage(titleMessages.chargen)}>
+            <Box justify='center' align='center' margin='medium'>
+               <PlayerNameInput label={this.props.intl.formatMessage(chargenMessages.player_name)} />
+               <CharacterNameInput label={this.props.intl.formatMessage(chargenMessages.character_name)} />
+               <ShadowInput label={this.props.intl.formatMessage(chargenMessages.shadow)} />
+               <QuoteInput label={this.props.intl.formatMessage(chargenMessages.quote)} />
+               <RaceInput label={this.props.intl.formatMessage(chargenMessages.race)} />
+               <OccupationInput label={this.props.intl.formatMessage(chargenMessages.occupation)} />
+               <AttributesForm />
+            </Box>
+         </SimpleView>
+      );
+   }
+
+}
 
 CharacterGenerationView.propTypes = {
-   intl: PropTypes.object.isRequired
+   intl: PropTypes.object.isRequired,
+   initialize: PropTypes.func.isRequired
 };
 
 const mapStateToProps = () => {
    return {};
 };
 
-const mapDispatchToProps = () => {
-   return {};
+const mapDispatchToProps = (dispatch) => {
+   return {
+      initialize: bindActionCreators(requestRaces, dispatch)
+   };
 };
 
 export default injectIntl(connect(

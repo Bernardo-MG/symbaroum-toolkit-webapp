@@ -24,6 +24,6 @@ function* buildOptions(action) {
 }
 
 export const raceRequestSagas = [
-   takeLatest(requestTypes.REQUEST_SPONSOR_AFFINITY_GROUP_OPTIONS, requestOptions),
-   takeLatest(requestTypes.REQUEST_SUCCESS_SPONSOR_AFFINITY_GROUP_OPTIONS, buildOptions)
+   takeLatest(requestTypes.REQUEST_RACES, requestOptions),
+   takeLatest(requestTypes.REQUEST_SUCCESS_RACES, buildOptions)
 ];
