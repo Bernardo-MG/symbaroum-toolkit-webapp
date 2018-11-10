@@ -23,7 +23,7 @@ function* buildOptions(action) {
    yield put({ type: types.SET_RACES_OPTIONS, payload: action.payload });
 }
 
-export const optionsSagas = [
+export const raceRequestSagas = [
    takeLatest(requestTypes.REQUEST_SPONSOR_AFFINITY_GROUP_OPTIONS, requestOptions),
    takeLatest(requestTypes.REQUEST_SUCCESS_SPONSOR_AFFINITY_GROUP_OPTIONS, buildOptions)
 ];
