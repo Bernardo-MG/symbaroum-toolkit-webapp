@@ -2,7 +2,7 @@ import { put, takeLatest, call } from 'redux-saga/effects';
 import * as types from 'chargen/actions/actionTypes';
 import * as requestTypes from 'chargen/requests/races/actions/actionTypes';
 import { racesFetcher } from 'chargen/requests/races/fetchers';
-import { racesSuccess, racesFailure } from 'chargen/requests/races/actions';
+import { racesRequestSuccess, racesRequestFailure } from 'chargen/requests/races/actions';
 
 function fetchOptions(params) {
    return racesFetcher.fetch(params);
@@ -13,9 +13,9 @@ function* requestOptions(action) {
    let response;
    try {
       response = yield call(fetchOptions, params);
-      yield put(racesSuccess(response.payload));
+      yield put(racesRequestSuccess(response.payload));
    } catch (err) {
-      yield put(racesFailure(err));
+      yield put(racesRequestFailure(err));
    }
 }
 
