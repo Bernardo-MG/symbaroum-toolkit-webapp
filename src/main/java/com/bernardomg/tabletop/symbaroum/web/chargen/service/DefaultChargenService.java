@@ -14,7 +14,7 @@ public final class DefaultChargenService implements ChargenService {
 
     @Override
     public final Iterable<String> getRaceOptions() {
-        return Arrays.asList("r1", "r3", "r3");
+        return Arrays.asList("r1", "r2", "r3");
     }
 
 }
