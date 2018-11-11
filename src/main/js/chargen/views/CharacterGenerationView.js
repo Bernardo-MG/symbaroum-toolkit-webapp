@@ -16,7 +16,7 @@ import CharacterNameInput from 'chargen/containers/CharacterNameInput';
 import OccupationInput from 'chargen/containers/OccupationInput';
 import PlayerNameInput from 'chargen/containers/PlayerNameInput';
 import QuoteInput from 'chargen/containers/QuoteInput';
-import RaceInput from 'chargen/containers/RaceInput';
+import RaceCombo from 'chargen/containers/RaceCombo';
 import ShadowInput from 'chargen/containers/ShadowInput';
 
 import { requestRaces } from 'chargen/requests/races/actions';
@@ -40,7 +40,7 @@ class CharacterGenerationView extends Component {
                <CharacterNameInput label={this.props.intl.formatMessage(chargenMessages.character_name)} />
                <ShadowInput label={this.props.intl.formatMessage(chargenMessages.shadow)} />
                <QuoteInput label={this.props.intl.formatMessage(chargenMessages.quote)} />
-               <RaceInput label={this.props.intl.formatMessage(chargenMessages.race)} />
+               <RaceCombo label={this.props.intl.formatMessage(chargenMessages.race)} />
                <OccupationInput label={this.props.intl.formatMessage(chargenMessages.occupation)} />
                <AttributesForm />
             </Box>
