@@ -1,8 +1,9 @@
-import { put, takeLatest, call } from 'redux-saga/effects';
+import { put, takeLatest, call, select } from 'redux-saga/effects';
 import * as types from 'chargen/actions/actionTypes';
 import * as requestTypes from 'chargen/requests/attributes/actions/actionTypes';
 import { derivedAttributesFetcher } from 'chargen/requests/attributes/fetchers';
 import { derivedAttributesRequestSuccess, derivedAttributesRequestFailure } from 'chargen/requests/attributes/actions';
+import { selectAccurate, selectCunning, selectDiscreet, selectPersuasive, selectQuick, selectResolute, selectStrong, selectVigilant } from 'chargen/selectors';
 
 function fetchOptions(params) {
    return derivedAttributesFetcher.fetch(params);
@@ -19,6 +20,20 @@ function* requestDerived(action) {
    }
 }
 
+function* generateDerived() {
+   const accurate = yield select(selectAccurate);
+   const cunning = yield select(selectCunning);
+   const discreet = yield select(selectDiscreet);
+   const persuasive = yield select(selectPersuasive);
+   const quick = yield select(selectQuick);
+   const resolute = yield select(selectResolute);
+   const strong = yield select(selectStrong);
+   const vigilant = yield select(selectVigilant);
+
+   const params = { accurate, cunning, discreet, persuasive, quick, resolute, strong, vigilant };
+   yield call(requestDerived, { params });
+}
+
 function* buildDerived(action) {
    yield put({ type: types.SET_CORRUPTION_THRESHOLD, payload: action.payload.corruptionThreshold });
    yield put({ type: types.SET_DEFENSE, payload: action.payload.defense });
@@ -27,13 +42,13 @@ function* buildDerived(action) {
 }
 
 export const attributesRequestSagas = [
-   takeLatest(types.SET_ACCURATE, requestDerived),
-   takeLatest(types.SET_CUNNING, requestDerived),
-   takeLatest(types.SET_DISCREET, requestDerived),
-   takeLatest(types.SET_PERSUASIVE, requestDerived),
-   takeLatest(types.SET_QUICK, requestDerived),
-   takeLatest(types.SET_RESOLUTE, requestDerived),
-   takeLatest(types.SET_STRONG, requestDerived),
-   takeLatest(types.SET_VIGILANT, requestDerived),
+   takeLatest(types.SET_ACCURATE, generateDerived),
+   takeLatest(types.SET_CUNNING, generateDerived),
+   takeLatest(types.SET_DISCREET, generateDerived),
+   takeLatest(types.SET_PERSUASIVE, generateDerived),
+   takeLatest(types.SET_QUICK, generateDerived),
+   takeLatest(types.SET_RESOLUTE, generateDerived),
+   takeLatest(types.SET_STRONG, generateDerived),
+   takeLatest(types.SET_VIGILANT, generateDerived),
    takeLatest(requestTypes.REQUEST_SUCCESS_DERIVED_ATTRIBUTES, buildDerived)
 ];

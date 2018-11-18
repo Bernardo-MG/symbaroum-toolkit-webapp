@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bernardomg.tabletop.symbaroum.web.chargen.model.Attributes;
+import com.bernardomg.tabletop.symbaroum.web.chargen.model.DefaultAttributes;
 import com.bernardomg.tabletop.symbaroum.web.chargen.model.DerivedAttributes;
 import com.bernardomg.tabletop.symbaroum.web.chargen.service.ChargenService;
 
@@ -50,7 +50,7 @@ public class DerivedAttributesController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public final DerivedAttributes
-            getDerivedAttributes(final Attributes attributes) {
+            getDerivedAttributes(final DefaultAttributes attributes) {
         return chargenService.getDerivedAttributes(attributes);
     }
 
