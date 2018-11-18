@@ -38,12 +38,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.bernardomg.tabletop.symbaroum_toolkit_webapp.service.ExampleEntityReportService;
+import com.bernardomg.tabletop.symbaroum_toolkit_webapp.service.ExampleEntityService;
+
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperPrint;
-
-import com.bernardomg.tabletop.symbaroum_toolkit_webapp.service.ExampleEntityReportService;
-import com.bernardomg.tabletop.symbaroum_toolkit_webapp.service.ExampleEntityService;
 
 /**
  * Controller for generating reports.

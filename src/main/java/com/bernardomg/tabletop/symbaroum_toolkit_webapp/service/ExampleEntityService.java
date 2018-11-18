@@ -26,8 +26,8 @@ package com.bernardomg.tabletop.symbaroum_toolkit_webapp.service;
 
 import org.springframework.data.domain.Pageable;
 
-import com.bernardomg.tabletop.symbaroum_toolkit_webapp.model.persistence.DefaultExampleEntity;
 import com.bernardomg.tabletop.symbaroum_toolkit_webapp.model.ExampleEntity;
+import com.bernardomg.tabletop.symbaroum_toolkit_webapp.model.persistence.DefaultExampleEntity;
 
 /**
  * Service for the example entity domain.

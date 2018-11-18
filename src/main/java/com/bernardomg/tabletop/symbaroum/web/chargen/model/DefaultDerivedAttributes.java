@@ -35,18 +35,22 @@ public final class DefaultDerivedAttributes implements DerivedAttributes {
         return thoughness;
     }
 
+    @Override
     public void setCorruptionThreshold(final Integer value) {
         corruptionThreshold = value;
     }
 
+    @Override
     public void setDefense(final Integer value) {
         defense = value;
     }
 
+    @Override
     public void setPainThreshold(final Integer value) {
         painThreshold = value;
     }
 
+    @Override
     public void setThoughness(final Integer value) {
         thoughness = value;
     }

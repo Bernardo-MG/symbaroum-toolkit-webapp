@@ -22,27 +22,21 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.tabletop.symbaroum_toolkit_webapp.service;
+package com.bernardomg.tabletop.symbaroum.web.repository;
 
-import com.bernardomg.tabletop.symbaroum_toolkit_webapp.model.persistence.DefaultExampleEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import net.sf.jasperreports.engine.JasperPrint;
+import com.bernardomg.tabletop.symbaroum.web.model.persistence.PersistentRace;
 
 /**
- * Service for generating reports for the example entities.
- * 
- * @author Bernardo Mart&iacute;nez Garrido
+ * Spring-JPA repository for {@link PersistentRace}.
+ * <p>
+ * This is a simple repository just to allow the endpoints querying the entities
+ * they are asked for.
  *
+ * @author Bernardo Mart&iacute;nez Garrido
  */
-public interface ExampleEntityReportService {
-
-    /**
-     * Returns the report for the received data.
-     * 
-     * @param data
-     *            data to populate the report
-     * @return the report for the data
-     */
-    public JasperPrint getReport(final Iterable<DefaultExampleEntity> data);
+public interface PersistentRaceRepository
+        extends JpaRepository<PersistentRace, Integer> {
 
 }

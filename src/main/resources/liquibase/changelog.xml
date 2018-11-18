@@ -4,12 +4,12 @@
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-   <changeSet author="Bernardo" id="initial_tables">
-      <createTable tableName="example_entities">
+   <changeSet author="Bernardo" id="chargen_tables">
+      <createTable tableName="races">
          <column autoIncrement="true" name="id" type="BIGINT">
             <constraints primaryKey="true" />
          </column>
-         <column name="name" type="VARCHAR(30)">
+         <column name="name" type="VARCHAR(50)">
             <constraints nullable="false" unique="true" />
          </column>
       </createTable>

@@ -1,23 +1,34 @@
 
 package com.bernardomg.tabletop.symbaroum.web.chargen.service;
 
-import java.util.Arrays;
+import static com.google.common.base.Preconditions.checkNotNull;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
 import com.bernardomg.tabletop.symbaroum.web.chargen.model.Attributes;
 import com.bernardomg.tabletop.symbaroum.web.chargen.model.DefaultDerivedAttributes;
 import com.bernardomg.tabletop.symbaroum.web.chargen.model.DerivedAttributes;
+import com.bernardomg.tabletop.symbaroum.web.model.Race;
+import com.bernardomg.tabletop.symbaroum.web.repository.PersistentRaceRepository;
 
 @Service
 public final class DefaultChargenService implements ChargenService {
 
-    public DefaultChargenService() {
+    private final PersistentRaceRepository raceRepository;
+
+    public DefaultChargenService(final PersistentRaceRepository raceRepo) {
         super();
+
+        raceRepository = checkNotNull(raceRepo,
+                "Received a null pointer as race repository");
     }
 
     @Override
     public final DerivedAttributes
+
             getDerivedAttributes(final Attributes attributes) {
         final DerivedAttributes derived;
 
@@ -35,7 +46,11 @@ public final class DefaultChargenService implements ChargenService {
 
     @Override
     public final Iterable<String> getRaceOptions() {
-        return Arrays.asList("r1", "r2", "r3");
+        final List<? extends Race> races;
+
+        races = raceRepository.findAll();
+
+        return races.stream().map(Race::getName).collect(Collectors.toList());
     }
 
 }

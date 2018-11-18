@@ -30,8 +30,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.bernardomg.tabletop.symbaroum_toolkit_webapp.model.persistence.DefaultExampleEntity;
 import com.bernardomg.tabletop.symbaroum_toolkit_webapp.model.ExampleEntity;
+import com.bernardomg.tabletop.symbaroum_toolkit_webapp.model.persistence.DefaultExampleEntity;
 import com.bernardomg.tabletop.symbaroum_toolkit_webapp.repository.ExampleEntityRepository;
 
 /**
