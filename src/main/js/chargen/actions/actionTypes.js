@@ -19,4 +19,7 @@ export const SET_QUOTE = 'SET_QUOTE';
 export const SET_RACE = 'SET_RACE';
 export const SET_SHADOW = 'SET_SHADOW';
 
+export const SET_ABILITIES_OPTIONS = 'SET_ABILITIES_OPTIONS';
 export const SET_RACES_OPTIONS = 'SET_RACES_OPTIONS';
+
+export const INITIALIZE_CHARGEN = 'INITIALIZE_CHARGEN';

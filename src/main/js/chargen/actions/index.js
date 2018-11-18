@@ -1,5 +1,11 @@
 import * as types from 'chargen/actions/actionTypes';
 
+export const initializeChargen = () => {
+   return {
+      type: types.INITIALIZE_CHARGEN
+   };
+};
+
 export const setAccurate = (value) => {
    return {
       type: types.SET_ACCURATE,

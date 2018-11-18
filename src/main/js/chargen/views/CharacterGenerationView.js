@@ -20,7 +20,7 @@ import QuoteInput from 'chargen/containers/QuoteInput';
 import RaceCombo from 'chargen/containers/RaceCombo';
 import ShadowInput from 'chargen/containers/ShadowInput';
 
-import { requestRaces } from 'chargen/requests/races/actions';
+import { initializeChargen } from 'chargen/actions';
 
 import chargenMessages from 'i18n/chargen';
 import titleMessages from 'i18n/title';
@@ -63,7 +63,7 @@ const mapStateToProps = () => {
 
 const mapDispatchToProps = (dispatch) => {
    return {
-      initialize: bindActionCreators(requestRaces, dispatch)
+      initialize: bindActionCreators(initializeChargen, dispatch)
    };
 };
 
