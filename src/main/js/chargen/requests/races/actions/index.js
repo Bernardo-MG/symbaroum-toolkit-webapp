@@ -1,9 +1,8 @@
 import * as types from 'chargen/requests/races/actions/actionTypes';
 
-export const requestRaces = (payload) => {
+export const requestRaces = () => {
    return {
-      type: types.REQUEST_RACES,
-      payload
+      type: types.REQUEST_RACES
    };
 };
 
