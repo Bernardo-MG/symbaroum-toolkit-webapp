@@ -19,6 +19,11 @@
 -- This SQL script populates the initial data.
 -- ****************************************
 
+INSERT INTO abilities (name) VALUES
+   ('a1'),
+   ('a2'),
+   ('a3');
+
 INSERT INTO races (name) VALUES
    ('r1'),
    ('r2'),

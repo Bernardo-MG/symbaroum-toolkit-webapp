@@ -11,19 +11,36 @@ import org.springframework.stereotype.Service;
 import com.bernardomg.tabletop.symbaroum.web.chargen.model.Attributes;
 import com.bernardomg.tabletop.symbaroum.web.chargen.model.DefaultDerivedAttributes;
 import com.bernardomg.tabletop.symbaroum.web.chargen.model.DerivedAttributes;
+import com.bernardomg.tabletop.symbaroum.web.model.Ability;
 import com.bernardomg.tabletop.symbaroum.web.model.Race;
+import com.bernardomg.tabletop.symbaroum.web.repository.PersistentAbilityRepository;
 import com.bernardomg.tabletop.symbaroum.web.repository.PersistentRaceRepository;
 
 @Service
 public final class DefaultChargenService implements ChargenService {
 
-    private final PersistentRaceRepository raceRepository;
+    private final PersistentAbilityRepository abilityRepository;
 
-    public DefaultChargenService(final PersistentRaceRepository raceRepo) {
+    private final PersistentRaceRepository    raceRepository;
+
+    public DefaultChargenService(final PersistentAbilityRepository abilityRepo,
+            final PersistentRaceRepository raceRepo) {
         super();
 
+        abilityRepository = checkNotNull(abilityRepo,
+                "Received a null pointer as race repository");
         raceRepository = checkNotNull(raceRepo,
                 "Received a null pointer as race repository");
+    }
+
+    @Override
+    public final Iterable<String> getAbilityOptions() {
+        final List<? extends Ability> races;
+
+        races = abilityRepository.findAll();
+
+        return races.stream().map(Ability::getName)
+                .collect(Collectors.toList());
     }
 
     @Override

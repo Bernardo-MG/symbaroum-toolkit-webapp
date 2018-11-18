@@ -5,6 +5,14 @@
    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
    <changeSet author="Bernardo" id="chargen_tables">
+      <createTable tableName="abilities">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" />
+         </column>
+         <column name="name" type="VARCHAR(50)">
+            <constraints nullable="false" unique="true" />
+         </column>
+      </createTable>
       <createTable tableName="races">
          <column autoIncrement="true" name="id" type="BIGINT">
             <constraints primaryKey="true" />

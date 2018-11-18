@@ -6,6 +6,8 @@ import com.bernardomg.tabletop.symbaroum.web.chargen.model.DerivedAttributes;
 
 public interface ChargenService {
 
+    public Iterable<String> getAbilityOptions();
+
     public DerivedAttributes getDerivedAttributes(final Attributes attributes);
 
     public Iterable<String> getRaceOptions();

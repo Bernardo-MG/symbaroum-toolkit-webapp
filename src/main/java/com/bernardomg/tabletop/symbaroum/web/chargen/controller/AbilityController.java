@@ -27,8 +27,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bernardomg.tabletop.symbaroum.web.chargen.service.ChargenService;
 
 @RestController
-@RequestMapping("/rest/chargen/races")
-public class RaceController {
+@RequestMapping("/rest/chargen/abilities")
+public class AbilityController {
 
     private final ChargenService chargenService;
 
@@ -39,7 +39,7 @@ public class RaceController {
      *            character generation service
      */
     @Autowired
-    public RaceController(final ChargenService cgService) {
+    public AbilityController(final ChargenService cgService) {
         super();
 
         chargenService = checkNotNull(cgService,
@@ -47,8 +47,8 @@ public class RaceController {
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public final Iterable<String> getRaces() {
-        return chargenService.getRaceOptions();
+    public final Iterable<String> getAbilities() {
+        return chargenService.getAbilityOptions();
     }
 
 }
