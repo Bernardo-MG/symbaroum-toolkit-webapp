@@ -29,7 +29,7 @@ import com.bernardomg.tabletop.symbaroum.web.chargen.model.DerivedAttributes;
 import com.bernardomg.tabletop.symbaroum.web.chargen.service.ChargenService;
 
 @RestController
-@RequestMapping("/rest/chargen/attributes")
+@RequestMapping("/rest/chargen/attributes/derived")
 public class DerivedAttributesController {
 
     private final ChargenService chargenService;
