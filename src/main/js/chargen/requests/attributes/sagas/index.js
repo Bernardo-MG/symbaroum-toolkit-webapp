@@ -2,7 +2,7 @@ import { put, takeLatest, call } from 'redux-saga/effects';
 import * as types from 'chargen/actions/actionTypes';
 import * as requestTypes from 'chargen/requests/attributes/actions/actionTypes';
 import { derivedAttributesFetcher } from 'chargen/requests/attributes/fetchers';
-import { derivedAttributesRequestSuccess, derivedAttributesRequestFailure } from 'chargen/requests/races/actions';
+import { derivedAttributesRequestSuccess, derivedAttributesRequestFailure } from 'chargen/requests/attributes/actions';
 
 function fetchOptions(params) {
    return derivedAttributesFetcher.fetch(params);
@@ -26,7 +26,7 @@ function* buildDerived(action) {
    yield put({ type: types.SET_THOUGHNESS, payload: action.payload.thoughness });
 }
 
-export const raceRequestSagas = [
+export const attributesRequestSagas = [
    takeLatest(types.SET_ACCURATE, requestDerived),
    takeLatest(types.SET_CUNNING, requestDerived),
    takeLatest(types.SET_DISCREET, requestDerived),
@@ -34,5 +34,6 @@ export const raceRequestSagas = [
    takeLatest(types.SET_QUICK, requestDerived),
    takeLatest(types.SET_RESOLUTE, requestDerived),
    takeLatest(types.SET_STRONG, requestDerived),
-   takeLatest(types.SET_VIGILANT, requestDerived)
+   takeLatest(types.SET_VIGILANT, requestDerived),
+   takeLatest(requestTypes.REQUEST_SUCCESS_DERIVED_ATTRIBUTES, buildDerived)
 ];

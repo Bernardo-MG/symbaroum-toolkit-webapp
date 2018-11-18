@@ -1,4 +1,4 @@
-import * as types from 'chargen/requests/races/actions/actionTypes';
+import * as types from 'chargen/requests/attributes/actions/actionTypes';
 
 export const requestDerivedAttributes = (payload) => {
    return {
