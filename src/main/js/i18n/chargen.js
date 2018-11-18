@@ -12,9 +12,17 @@ const appMessages = defineMessages({
       id: 'chargen.character_name',
       defaultMessage: 'Character Name'
    },
+   corruption_threshold: {
+      id: 'chargen.corruptionThreshold',
+      defaultMessage: 'Corruption Threshold'
+   },
    cunning: {
       id: 'chargen.cunning',
       defaultMessage: 'Cunning'
+   },
+   defense: {
+      id: 'chargen.defense',
+      defaultMessage: 'Defense'
    },
    discreet: {
       id: 'chargen.discreet',
@@ -23,6 +31,10 @@ const appMessages = defineMessages({
    occupation: {
       id: 'chargen.occupation',
       defaultMessage: 'Occupation'
+   },
+   pain_threshold: {
+      id: 'chargen.pain_threshold',
+      defaultMessage: 'Pain Threshold'
    },
    persuasive: {
       id: 'chargen.persuasive',
@@ -55,6 +67,10 @@ const appMessages = defineMessages({
    strong: {
       id: 'chargen.strong',
       defaultMessage: 'Strong'
+   },
+   thoughness: {
+      id: 'chargen.thoughness',
+      defaultMessage: 'Thoughness'
    },
    vigilant: {
       id: 'chargen.vigilant',

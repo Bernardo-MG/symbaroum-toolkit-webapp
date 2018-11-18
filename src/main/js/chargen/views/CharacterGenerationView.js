@@ -12,6 +12,7 @@ import Box from 'grommet/components/Box';
 import SimpleView from 'views/containers/SimpleView';
 
 import AttributesForm from 'chargen/components/AttributesForm';
+import DerivedAttributesField from 'chargen/components/DerivedAttributesField';
 import CharacterNameInput from 'chargen/containers/CharacterNameInput';
 import OccupationInput from 'chargen/containers/OccupationInput';
 import PlayerNameInput from 'chargen/containers/PlayerNameInput';
@@ -43,6 +44,7 @@ class CharacterGenerationView extends Component {
                <RaceCombo label={this.props.intl.formatMessage(chargenMessages.race)} />
                <OccupationInput label={this.props.intl.formatMessage(chargenMessages.occupation)} />
                <AttributesForm />
+               <DerivedAttributesField />
             </Box>
          </SimpleView>
       );
