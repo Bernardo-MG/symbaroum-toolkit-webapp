@@ -14,7 +14,7 @@ function toOption(option) {
 
 function toOptions(options) {
    const result = [];
-   options.forEach((option) => result.push(toOption(option)));
+   Object.keys(options).forEach((option) => result.push(toOption(option)));
    return result;
 }
 

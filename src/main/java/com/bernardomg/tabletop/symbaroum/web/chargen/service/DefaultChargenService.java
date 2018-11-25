@@ -4,6 +4,7 @@ package com.bernardomg.tabletop.symbaroum.web.chargen.service;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
@@ -34,13 +35,14 @@ public final class DefaultChargenService implements ChargenService {
     }
 
     @Override
-    public final Iterable<String> getAbilityOptions() {
-        final List<? extends Ability> races;
+    public final Map<String, Integer> getAbilityOptions() {
+        final List<? extends Ability> abilities;
 
-        races = abilityRepository.findAll();
+        abilities = abilityRepository.findAll();
 
-        return races.stream().map(Ability::getName)
-                .collect(Collectors.toList());
+        // TODO: The maximum level should be loaded from somewhere
+        return abilities.stream()
+                .collect(Collectors.toMap(Ability::getName, (i) -> 3));
     }
 
     @Override
