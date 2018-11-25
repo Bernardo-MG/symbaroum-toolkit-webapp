@@ -4,6 +4,10 @@ import { defineMessages } from 'react-intl';
  * Application internationalized messages.
  */
 const appMessages = defineMessages({
+   ability: {
+      id: 'chargen.ability',
+      defaultMessage: 'Ability'
+   },
    accurate: {
       id: 'chargen.accurate',
       defaultMessage: 'Accurate'
